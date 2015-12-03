@@ -26,10 +26,6 @@ import (
 	"syscall"
 )
 
-// BFDD BDF Daemon struct
-type BFDD struct {
-}
-
 func main() {
 	sigCh := make(chan os.Signal, 1)
 	signal.Notify(sigCh, syscall.SIGHUP, syscall.SIGTERM)
